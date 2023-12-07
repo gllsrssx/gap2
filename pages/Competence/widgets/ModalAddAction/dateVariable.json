@@ -40,7 +40,7 @@
     "labelPosition": "Top",
     "key": "7rc5d56muf",
     "labelTextSize": "0.875rem",
-    "defaultDate": "{{Date()}}",
+    "defaultDate": "{{(() => {\n    const now = new Date();\n    now.setHours(1, 0, 0, 0);\n\n    let isoString = now.toISOString();\n\tisoString = isoString.substring(0, isoString.length - 5) + \"Z\";\n    return isoString;\n})()}}",
     "isDeprecated": false,
     "rightColumn": 22,
     "widgetId": "rp13du53hj",

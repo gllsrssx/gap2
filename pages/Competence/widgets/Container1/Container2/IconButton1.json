@@ -11,8 +11,8 @@
         "click",
         "submit"
     ],
-    "topRow": 14,
-    "bottomRow": 19,
+    "topRow": 19,
+    "bottomRow": 24,
     "parentRowSpace": 10,
     "type": "ICON_BUTTON_WIDGET",
     "hideCard": false,
@@ -40,9 +40,9 @@
     "isLoading": false,
     "mobileTopRow": 7,
     "responsiveBehavior": "hug",
-    "originalTopRow": 14,
+    "originalTopRow": 19,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 60,
-    "originalBottomRow": 19,
+    "originalBottomRow": 24,
     "buttonVariant": "PRIMARY"
 }

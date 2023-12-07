@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 740,
+          "bottomRow": 770,
           "containerStyle": "none",
           "snapRows": 63,
           "parentRowSpace": 1,
@@ -27,18 +27,6 @@
         },
         "layoutOnLoadActions": [
           [
-            {
-              "id": "Competence_Find_competences1",
-              "name": "Find_competences1",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "{ competence: {\n\t$regex: SelectCompetence.filterText, \n\t'$options' : 'i', \n\tfilter: \"userId\"\n} }",
-                "SelectCompetence.filterText",
-                "appsmith.store.selectedUser?._id? appsmith.store.selectedUser._id:get_user.data[0]._id"
-              ],
-              "timeoutInMillisecond": 10000
-            },
             {
               "id": "Competence_get_actions",
               "name": "get_actions",
@@ -68,6 +56,20 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "appsmith.store.user?.email"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Competence_Find_competences1",
+              "name": "Find_competences1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "{ competence: {\n\t$regex: SelectCompetence.filterText, \n\t'$options' : 'i', \n\tfilter: \"userId\"\n} }",
+                "SelectCompetence.filterText",
+                "appsmith.store.selectedUser?._id? appsmith.store.selectedUser._id:get_user.data[0]._id"
               ],
               "timeoutInMillisecond": 10000
             }

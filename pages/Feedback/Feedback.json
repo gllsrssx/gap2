@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 840,
+          "bottomRow": 1240,
           "containerStyle": "none",
           "snapRows": 63,
           "parentRowSpace": 1,
@@ -28,11 +28,45 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "Feedback_get_actions",
+              "name": "get_actions",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.store.selectedCompetence"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Feedback_get_feedback",
+              "name": "get_feedback",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.store.selectedCompetence"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "Feedback_Total_record_competences1",
               "name": "Total_record_competences1",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Feedback_get_user",
+              "name": "get_user",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.store.user?.email"
+              ],
               "timeoutInMillisecond": 10000
             }
           ],
@@ -46,18 +80,6 @@
                 "TableUserCompetence.pageSize",
                 "appsmith.store.selectedUser",
                 "TableUserCompetence.pageOffset"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Feedback_get_user",
-              "name": "get_user",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "appsmith.store.user?.email"
               ],
               "timeoutInMillisecond": 10000
             }

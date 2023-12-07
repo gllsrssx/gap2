@@ -4,7 +4,7 @@
     "isCanvas": true,
     "templateHeight": 160,
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.5c9511142b3624c7491c5442e8ccd0ef.svg",
-    "topRow": 22,
+    "topRow": 25,
     "pageSize": 3,
     "type": "LIST_WIDGET_V2",
     "itemSpacing": 8,
@@ -77,7 +77,7 @@
     "isLoading": false,
     "mainCanvasId": "e72dz2l4o3",
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "originalBottomRow": 41,
+    "originalBottomRow": 44,
     "additionalStaticProps": [
         "level",
         "levelData",
@@ -90,7 +90,7 @@
     "widgetName": "List1",
     "listData": "{{get_actions.data}}",
     "displayName": "List",
-    "bottomRow": 41,
+    "bottomRow": 44,
     "parentRowSpace": 10,
     "hideCard": false,
     "mobileRightColumn": 24,
@@ -109,7 +109,7 @@
     "renderMode": "CANVAS",
     "mobileTopRow": 12,
     "responsiveBehavior": "fill",
-    "originalTopRow": 22,
+    "originalTopRow": 25,
     "mobileLeftColumn": 0,
     "selectedItemView": "{{{}}}"
 }

@@ -4,6 +4,7 @@
     "widgetName": "Container2Copy",
     "borderColor": "#E0DEDE",
     "isCanvas": true,
+    "dynamicPropertyPathList": [{"key": "isVisible"}],
     "displayName": "Container",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.daebf68875b6c8e909e9e8ac8bee0c02.svg",
     "searchTags": [
@@ -12,7 +13,7 @@
         "group"
     ],
     "topRow": 7,
-    "bottomRow": 82,
+    "bottomRow": 122,
     "parentRowSpace": 10,
     "type": "CONTAINER_WIDGET",
     "hideCard": false,
@@ -20,10 +21,12 @@
     "mobileRightColumn": 23,
     "animateLoading": true,
     "parentColumnSpace": 13,
+    "dynamicTriggerPathList": [],
     "leftColumn": 0,
     "dynamicBindingPathList": [
         {"key": "borderRadius"},
-        {"key": "boxShadow"}
+        {"key": "boxShadow"},
+        {"key": "isVisible"}
     ],
     "children": [{
         "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
@@ -31,7 +34,7 @@
         "widgetName": "Canvas2Copy",
         "displayName": "Canvas",
         "topRow": 0,
-        "bottomRow": 750,
+        "bottomRow": 1150,
         "parentRowSpace": 1,
         "type": "CANVAS_WIDGET",
         "canExtend": false,
@@ -75,7 +78,7 @@
     "widgetId": "kbvuxc0xev",
     "containerStyle": "card",
     "minWidth": 450,
-    "isVisible": true,
+    "isVisible": "{{ \nappsmith.store.selectedUser? true:false\n}}",
     "version": 1,
     "parentId": "1o3tpk9o25",
     "tags": ["Layout"],
@@ -87,6 +90,6 @@
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 0,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 82,
+    "originalBottomRow": 122,
     "minDynamicHeight": 10
 }

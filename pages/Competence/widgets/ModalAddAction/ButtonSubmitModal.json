@@ -3,7 +3,7 @@
     "boxShadow": "none",
     "mobileBottomRow": 22,
     "widgetName": "ButtonSubmitModal",
-    "onClick": "{{Insert_action.run().then(() => {\n  closeModal('ModalAddAction');\n  Find_competences1.run();\n  get_feedback.run();\n  get_actions.run();\n});}}",
+    "onClick": "{{update_action.run().then(() => {\n  closeModal('ModalAddAction');\n  Find_competences1.run();\n  get_feedback.run();\n  get_actions.run();\n});}}",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "displayName": "Button",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.05d209fafeb13a8569e3b4e97069d9ee.svg",

@@ -29,7 +29,7 @@
           }
         },
         "body": {
-          "data": "{\n    \"update\": \"actions\",\n    \"updates\": [\n        {\n            \"q\": {\n                \"$or\": [\n                    { \"description\": \"{{InputAction.text}}\" },\n                    { \n                        \"competenceId\": \"{{currentItemId.text}}\", \n                        \"date\": { \"$date\": \"{{TextTodayISO.text}}\" }\n                    }\n                ]\n            },\n            \"u\": {\n                \"$set\": {\n                    \"description\": \"{{InputAction.text}}\",\n                    \"competenceId\": \"{{currentItemId.text}}\",\n                    \"date\": { \"$date\": \"{{TextTodayISO.text}}\" }\n                }\n            },\n            \"upsert\": true\n        }\n    ]\n}\n"
+          "data": "{\n    \"update\": \"actions\",\n    \"updates\": [\n        {\n            \"q\": {\n                \"$or\": [\n                    { \"description\": \"{{InputAction.text}}\" },\n                    { \n                        \"competenceId\": \"{{appsmith.store.selectedCompetence}}\", \n                        \"date\": { \"$date\": \"{{TextTodayISO.text}}\" }\n                    }\n                ]\n            },\n            \"u\": {\n                \"$set\": {\n                    \"description\": \"{{InputAction.text}}\",\n                    \"competenceId\": \"{{appsmith.store.selectedCompetence}}\",\n                    \"date\": { \"$date\": \"{{TextTodayISO.text}}\" }\n                }\n            },\n            \"upsert\": true\n        }\n    ]\n}\n"
         },
         "collection": {
           "data": "action",
@@ -120,7 +120,7 @@
       "(ModalAddAction. || {})",
       "InputAction.text",
       "TextTodayISO.text",
-      "currentItemId.text"
+      "appsmith.store.selectedCompetence"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

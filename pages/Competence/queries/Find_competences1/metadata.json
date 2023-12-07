@@ -29,7 +29,7 @@
           }
         },
         "body": {
-          "data": "{\n    \"find\": \"competences\",\n    \"filter\": {\n        \"competence\": {\n            \"$regex\": \"{{SelectCompetence.filterText}}\",\n            \"$options\": \"i\"\n        },\n        \"userId\": \"{{appsmith.store.selectedUser?._id? appsmith.store.selectedUser._id:get_user.data[0]._id}}\"\n    },\n    \"limit\": 10,\n    \"batchSize\": 10\n}\n\n"
+          "data": "{\n    \"find\": \"competences\",\n    \"filter\": {\n        \"competence\": {\n            \"$regex\": \"{{SelectCompetence.filterText}}\",\n            \"$options\": \"i\"\n        },\n        \"userId\": \"{{appsmith.store.selectedUser?._id? appsmith.store.selectedUser._id:get_user.data[0]._id}}\"\n    }\n}\n\n"
         },
         "collection": {
           "data": "competences"
