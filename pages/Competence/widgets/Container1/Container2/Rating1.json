@@ -1,7 +1,10 @@
 {
     "mobileBottomRow": 4,
     "widgetName": "Rating1",
-    "dynamicPropertyPathList": [{"key": "isReadOnly"}],
+    "dynamicPropertyPathList": [
+        {"key": "isReadOnly"},
+        {"key": "isVisible"}
+    ],
     "displayName": "Rating",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.2281d0260761c25b3504117eddb50d8d.svg",
     "searchTags": [
@@ -23,7 +26,8 @@
     "dynamicBindingPathList": [
         {"key": "activeColor"},
         {"key": "isReadOnly"},
-        {"key": "defaultRate"}
+        {"key": "defaultRate"},
+        {"key": "isVisible"}
     ],
     "isDisabled": false,
     "key": "nmr9nuvadr",
@@ -33,7 +37,7 @@
     "inactiveColor": "#E0DEDE",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "bbnu1g026s",
-    "isVisible": true,
+    "isVisible": "{{(() => {\nconst selectedCompetence = Find_competences1.data.find(competence => \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t competence._id === appsmith.store.selectedCompetence);\n    return selectedCompetence.rating == -1 ? \n\t\t\t'false' : 'true';\n})()}}",
     "parentId": "if8d1ep0lg",
     "tags": ["Content"],
     "renderMode": "CANVAS",

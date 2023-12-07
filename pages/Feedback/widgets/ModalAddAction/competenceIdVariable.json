@@ -62,6 +62,6 @@
     "mobileLeftColumn": 0,
     "maxDynamicHeight": 9000,
     "onFilterUpdate": "{{\n            Find_competences1.run();\n            \n          }}",
-    "onOptionChange": "{{storeValue('selectedCompetence', competenceIdVariable.selectedOptionValue);}}",
+    "onOptionChange": "{{storeValue('selectedCompetence', SelectCompetence.selectedOptionValue);}}",
     "minDynamicHeight": 4
 }

@@ -45,8 +45,7 @@
               "jsonPathKeys": [
                 "TableUserCompetence.pageSize",
                 "appsmith.store.selectedUser",
-                "TableUserCompetence.pageOffset",
-                " TableUserCompetence.sortOrder.column ? { [TableUserCompetence.sortOrder.column]: TableUserCompetence.sortOrder.order !== \"desc\" ? 1 : -1 } : {}"
+                "TableUserCompetence.pageOffset"
               ],
               "timeoutInMillisecond": 10000
             }

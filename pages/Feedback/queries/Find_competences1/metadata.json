@@ -63,7 +63,7 @@
             "data": "{\"userId\": \"{{appsmith.store.selectedUser}}\"}"
           },
           "sort": {
-            "data": "{{ TableUserCompetence.sortOrder.column ? { [TableUserCompetence.sortOrder.column]: TableUserCompetence.sortOrder.order !== \"desc\" ? 1 : -1 } : {}}}"
+            "data": "{mayor:-1}"
           },
           "limit": {
             "data": "{{TableUserCompetence.pageSize}}"
@@ -79,7 +79,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {\"userId\": \"{{appsmith.store.selectedUser}}\"},\n  \"sort\": {{ TableUserCompetence.sortOrder.column ? { [TableUserCompetence.sortOrder.column]: TableUserCompetence.sortOrder.order !== \"desc\" ? 1 : -1 } : {}}},\n  \"skip\": {{TableUserCompetence.pageOffset}},\n  \"limit\": {{TableUserCompetence.pageSize}},\n  \"batchSize\": {{TableUserCompetence.pageSize}}\n}\n",
+            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {\"userId\": \"{{appsmith.store.selectedUser}}\"},\n  \"sort\": {mayor:-1},\n  \"skip\": {{TableUserCompetence.pageOffset}},\n  \"limit\": {{TableUserCompetence.pageSize}},\n  \"batchSize\": {{TableUserCompetence.pageSize}}\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -105,9 +105,6 @@
         "key": "formData.find.skip.data"
       },
       {
-        "key": "formData.find.sort.data"
-      },
-      {
         "key": "formData.find.limit.data"
       },
       {
@@ -118,7 +115,6 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      " TableUserCompetence.sortOrder.column ? { [TableUserCompetence.sortOrder.column]: TableUserCompetence.sortOrder.order !== \"desc\" ? 1 : -1 } : {}",
       "TableUserCompetence.pageOffset",
       "TableUserCompetence.pageSize",
       "appsmith.store.selectedUser"

@@ -122,7 +122,7 @@
             "index": 0,
             "isDiscardVisible": true,
             "isVisible": true,
-            "label": "name",
+            "label": "user",
             "columnType": "text",
             "thousandSeparator": true,
             "horizontalAlignment": "LEFT",
