@@ -29,7 +29,7 @@
           }
         },
         "body": {
-          "data": "{\n    \"find\": \"competences\",\n    \"filter\": {\n        \"competence\": {\n            \"$regex\": \"{{SelectCompetence.filterText}}\",\n            \"$options\": \"i\"\n        },\n        \"userId\": \"{{appsmith.store.selectedUser?._id? appsmith.store.selectedUser._id:get_user.data[0]._id}}\"\n    }\n}\n\n"
+          "data": "{\n    \"find\": \"competences\",\n    \"filter\": {\n        \"competence\": {\n            \"$regex\": \"{{SelectCompetence.filterText}}\",\n            \"$options\": \"i\"\n        },\n        \"userId\": \"{{get_user.data[0]._id}}\"\n    }\n}\n\n"
         },
         "collection": {
           "data": "competences"
@@ -116,13 +116,14 @@
     "messages": [],
     "jsonPathKeys": [
       "SelectCompetence.filterText",
-      "appsmith.store.selectedUser?._id? appsmith.store.selectedUser._id:get_user.data[0]._id",
+      "get_user.data[0]._id",
       "{ competence: {\n\t$regex: SelectCompetence.filterText, \n\t'$options' : 'i', \n\tfilter: \"userId\"\n} }"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-12-06T14:27:33Z"
   },
   "id": "Competentie_Find_competences1",
   "deleted": false,

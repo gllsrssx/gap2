@@ -60,7 +60,7 @@
             "data": ""
           },
           "query": {
-            "data": ""
+            "data": "{\"userId\":\"{{get_user.data[0]._id}}\"}"
           },
           "sort": {
             "data": "{date:-1}"
@@ -79,7 +79,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"actions\",\n  \"sort\": {date:-1},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
+            "data": "{\n  \"find\": \"actions\",\n  \"filter\": {\"userId\":\"{{get_user.data[0]._id}}\"},\n  \"sort\": {date:-1},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -100,11 +100,17 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.find.query.data"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "get_user.data[0]._id"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],

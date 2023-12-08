@@ -34,8 +34,8 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "{ competence: {\n\t$regex: SelectCompetence.filterText, \n\t'$options' : 'i', \n\tfilter: \"userId\"\n} }",
-                "SelectCompetence.filterText",
-                "appsmith.store.selectedUser?._id? appsmith.store.selectedUser._id:get_user.data[0]._id"
+                "get_user.data[0]._id",
+                "SelectCompetence.filterText"
               ],
               "timeoutInMillisecond": 10000
             },

@@ -29,13 +29,13 @@
           }
         },
         "body": {
-          "data": "{\n  \"find\": \"competences\",\n\t\"filter\": {\"userId\":\"{{get_user.data[0]._id}}\"},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n"
+          "data": "{\n  \"find\": \"competences\",\n\t\"filter\": {\"userId\":\"{{get_user.data[0]._id}}\"}\n}\n"
         },
         "collection": {
           "data": "competences"
         },
         "command": {
-          "data": "RAW"
+          "data": "FIND"
         },
         "count": {
           "query": {
@@ -63,10 +63,10 @@
             "data": ""
           },
           "query": {
-            "data": ""
+            "data": "{\"userId\":\"{{get_user.data[0]._id}}\"}"
           },
           "sort": {
-            "data": ""
+            "data": "{mayor:-1}"
           },
           "limit": {
             "data": ""
@@ -106,6 +106,9 @@
     "dynamicBindingPathList": [
       {
         "key": "formData.body.data"
+      },
+      {
+        "key": "formData.find.query.data"
       }
     ],
     "isValid": true,
