@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "update_feedback",
+    "name": "Find_competences1",
     "datasource": {
       "name": "GAP",
       "pluginId": "mongo-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Coach",
+    "pageId": "Competentie",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -29,12 +29,10 @@
           }
         },
         "body": {
-          "data": "{\n    \"update\": \"feedback\",\n    \"updates\": [\n        {\n            \"q\": {\n                \"$or\": [\n                    { \"feedback\": \"{{InputFeedback.text}}\" },\n                    { \n                    \"competenceId\": \"{{appsmith.store.selectedCompetence}}\",\n                    \"userId\": \"{{appsmith.store.selectedUser}}\",\n                    \"date\": { \"$date\": \"{{TextTodayISO.text}}\" }\n                    }\n                ]\n            },\n            \"u\": {\n                \"$set\": {\n                    \"feedback\": \"{{InputFeedback.text}}\",\n                    \"competenceId\": \"{{appsmith.store.selectedCompetence}}\",\n                    \"userId\": \"{{appsmith.store.selectedUser}}\",\n                    \"date\": { \"$date\": \"{{TextTodayISO.text}}\" }\n                }\n            },\n            \"upsert\": true\n        }\n    ]\n}\n"
+          "data": "{\n    \"find\": \"competences\",\n    \"filter\": {\n        \"competence\": {\n            \"$regex\": \"{{SelectCompetence.filterText}}\",\n            \"$options\": \"i\"\n        },\n        \"userId\": \"{{appsmith.store.selectedUser?._id? appsmith.store.selectedUser._id:get_user.data[0]._id}}\"\n    }\n}\n\n"
         },
         "collection": {
-          "data": "action",
-          "componentData": "users",
-          "viewType": "json"
+          "data": "competences"
         },
         "command": {
           "data": "RAW"
@@ -65,7 +63,7 @@
             "data": ""
           },
           "query": {
-            "data": ""
+            "data": "{{{ competence: {\n\t$regex: SelectCompetence.filterText, \n\t'$options' : 'i', \n\tfilter: \"userId\"\n} }}}"
           },
           "sort": {
             "data": ""
@@ -79,12 +77,12 @@
         },
         "insert": {
           "documents": {
-            "data": "{{(ModalAddAction. || {})}}"
+            "data": ""
           }
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"update\": \"users\",\n  \"updates\": [{\n    \"q\": ,\n    \"u\": ,\n    \"multi\": false,\n  }]\n}\n",
+            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {{{ competence: {\n\t$regex: SelectCompetence.filterText, \n\t'$options' : 'i', \n\tfilter: \"userId\"\n} }}},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -104,10 +102,10 @@
         }
       }
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
-        "key": "formData.insert.documents.data"
+        "key": "formData.find.query.data"
       },
       {
         "key": "formData.body.data"
@@ -117,19 +115,16 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "(ModalAddAction. || {})",
-      "InputFeedback.text",
-      "TextTodayISO.text",
-      "appsmith.store.selectedCompetence",
-      "appsmith.store.selectedUser"
+      "SelectCompetence.filterText",
+      "appsmith.store.selectedUser?._id? appsmith.store.selectedUser._id:get_user.data[0]._id",
+      "{ competence: {\n\t$regex: SelectCompetence.filterText, \n\t'$options' : 'i', \n\tfilter: \"userId\"\n} }"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": [],
-    "createdAt": "2023-12-07T14:16:23Z"
+    "userPermissions": []
   },
-  "id": "Coach_update_feedback",
+  "id": "Competentie_Find_competences1",
   "deleted": false,
-  "gitSyncId": "657084d5d42de31d619385a4_6571d3b7af92d546b6be5846"
+  "gitSyncId": "656889f38f855d017d93c255_656df248f229506c2efe0fc8"
 }

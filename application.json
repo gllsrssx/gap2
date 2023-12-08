@@ -13,15 +13,15 @@
       "isDefault": false
     },
     {
-      "id": "Competence",
-      "isDefault": false
-    },
-    {
-      "id": "Coach",
+      "id": "Competentie",
       "isDefault": false
     },
     {
       "id": "Evaluatie",
+      "isDefault": false
+    },
+    {
+      "id": "Coach",
       "isDefault": false
     }
   ],
@@ -31,6 +31,17 @@
   "unpublishedApplicationDetail": {
     "appPositioning": {
       "type": "FIXED"
+    },
+    "navigationSetting": {
+      "showNavbar": false,
+      "orientation": "side",
+      "navStyle": "sidebar",
+      "position": "static",
+      "itemStyle": "text",
+      "colorStyle": "theme",
+      "logoAssetId": "",
+      "logoConfiguration": "logoAndApplicationTitle",
+      "showSignIn": true
     }
   },
   "color": "#F5D1D1",
@@ -45,6 +56,11 @@
   "publishedCustomJSLibs": [],
   "evaluationVersion": 2,
   "applicationVersion": 2,
+  "embedSetting": {
+    "height": "720px",
+    "width": "1024px",
+    "showNavigationBar": false
+  },
   "collapseInvisibleWidgets": true,
   "isManualUpdate": false,
   "deleted": false

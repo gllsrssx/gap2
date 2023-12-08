@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "update_feedback",
+    "name": "get_feedback",
     "datasource": {
       "name": "GAP",
       "pluginId": "mongo-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Coach",
+    "pageId": "Competentie",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -29,12 +29,10 @@
           }
         },
         "body": {
-          "data": "{\n    \"update\": \"feedback\",\n    \"updates\": [\n        {\n            \"q\": {\n                \"$or\": [\n                    { \"feedback\": \"{{InputFeedback.text}}\" },\n                    { \n                    \"competenceId\": \"{{appsmith.store.selectedCompetence}}\",\n                    \"userId\": \"{{appsmith.store.selectedUser}}\",\n                    \"date\": { \"$date\": \"{{TextTodayISO.text}}\" }\n                    }\n                ]\n            },\n            \"u\": {\n                \"$set\": {\n                    \"feedback\": \"{{InputFeedback.text}}\",\n                    \"competenceId\": \"{{appsmith.store.selectedCompetence}}\",\n                    \"userId\": \"{{appsmith.store.selectedUser}}\",\n                    \"date\": { \"$date\": \"{{TextTodayISO.text}}\" }\n                }\n            },\n            \"upsert\": true\n        }\n    ]\n}\n"
+          "data": "{\n    \"find\": \"feedback\",\n    \"filter\": {\n        \"competenceId\": \"{{appsmith.store.selectedCompetence}}\"\n    },\n\t\t\"sort\": {\n        \"date\": -1 \n    },\n    \"limit\": 10,\n    \"batchSize\": 10\n}"
         },
         "collection": {
-          "data": "action",
-          "componentData": "users",
-          "viewType": "json"
+          "data": ""
         },
         "command": {
           "data": "RAW"
@@ -79,13 +77,7 @@
         },
         "insert": {
           "documents": {
-            "data": "{{(ModalAddAction. || {})}}"
-          }
-        },
-        "misc": {
-          "formToNativeQuery": {
-            "data": "{\n  \"update\": \"users\",\n  \"updates\": [{\n    \"q\": ,\n    \"u\": ,\n    \"multi\": false,\n  }]\n}\n",
-            "status": "SUCCESS"
+            "data": ""
           }
         },
         "smartSubstitution": {
@@ -104,11 +96,8 @@
         }
       }
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
-      {
-        "key": "formData.insert.documents.data"
-      },
       {
         "key": "formData.body.data"
       }
@@ -117,19 +106,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "(ModalAddAction. || {})",
-      "InputFeedback.text",
-      "TextTodayISO.text",
-      "appsmith.store.selectedCompetence",
-      "appsmith.store.selectedUser"
+      "appsmith.store.selectedCompetence"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": [],
-    "createdAt": "2023-12-07T14:16:23Z"
+    "userPermissions": []
   },
-  "id": "Coach_update_feedback",
+  "id": "Competentie_get_feedback",
   "deleted": false,
-  "gitSyncId": "657084d5d42de31d619385a4_6571d3b7af92d546b6be5846"
+  "gitSyncId": "656889f38f855d017d93c255_656e0c6ecda340375a4efe0b"
 }

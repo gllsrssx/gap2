@@ -1,27 +1,26 @@
 {
   "unpublishedPage": {
-    "name": "Home",
-    "slug": "home",
+    "name": "Competentie",
+    "slug": "competentie",
     "layouts": [
       {
         "viewMode": false,
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 4896,
+          "rightColumn": 1224,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 960,
+          "bottomRow": 770,
           "containerStyle": "none",
-          "snapRows": 124,
+          "snapRows": 63,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
           "version": 87,
-          "minHeight": 1292,
-          "dynamicTriggerPathList": [],
+          "minHeight": 650,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
           "leftColumn": 0
@@ -29,7 +28,29 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Home_get_user",
+              "id": "Competentie_get_actions",
+              "name": "get_actions",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.store.selectedCompetence"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Competentie_get_feedback",
+              "name": "get_feedback",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.store.selectedCompetence"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Competentie_get_user",
               "name": "get_user",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
@@ -41,22 +62,14 @@
           ],
           [
             {
-              "id": "Home_get_competences",
-              "name": "get_competences",
+              "id": "Competentie_Find_competences1",
+              "name": "Find_competences1",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "get_user.data[0]._id"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Home_get_feedback",
-              "name": "get_feedback",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "get_user.data[0]._id"
+                "{ competence: {\n\t$regex: SelectCompetence.filterText, \n\t'$options' : 'i', \n\tfilter: \"userId\"\n} }",
+                "SelectCompetence.filterText",
+                "appsmith.store.selectedUser?._id? appsmith.store.selectedUser._id:get_user.data[0]._id"
               ],
               "timeoutInMillisecond": 10000
             }
@@ -64,7 +77,7 @@
         ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Home",
+        "id": "Competentie",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -72,8 +85,8 @@
     ],
     "userPermissions": [],
     "policies": [],
-    "isHidden": false
+    "isHidden": true
   },
   "deleted": false,
-  "gitSyncId": "656889f38f855d017d93c255_656889f38f855d017d93c257"
+  "gitSyncId": "656889f38f855d017d93c255_656df067e3fc0d0c27d09cbe"
 }

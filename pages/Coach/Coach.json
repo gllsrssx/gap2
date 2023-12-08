@@ -2,6 +2,7 @@
   "unpublishedPage": {
     "name": "Coach",
     "slug": "coach",
+    "customSlug": "",
     "layouts": [
       {
         "viewMode": false,
@@ -109,7 +110,7 @@
     ],
     "userPermissions": [],
     "policies": [],
-    "isHidden": false
+    "isHidden": true
   },
   "deleted": false,
   "gitSyncId": "656889f38f855d017d93c255_656e0d93e2f16a4e32465251"

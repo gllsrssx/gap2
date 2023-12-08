@@ -70,7 +70,8 @@
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-12-06T14:27:33Z"
   },
   "id": "Coach_Total_record_competences1",
   "deleted": false,
