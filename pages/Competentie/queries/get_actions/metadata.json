@@ -29,7 +29,7 @@
           }
         },
         "body": {
-          "data": "{\n    \"find\": \"actions\",\n    \"filter\": {\n        \"competenceId\": \"{{appsmith.store.selectedCompetence}}\"\n    },\n\t\t\"sort\": {\n        \"date\": -1 \n    },\n    \"limit\": 10,\n    \"batchSize\": 10\n}"
+          "data": "{\n    \"find\": \"actions\",\n    \"filter\": {\n        \"competenceId\": \"{{appsmith.store.selectedCompetence}}\"\n    },\n\t\t\"sort\": {\n        \"date\": -1 \n    }\n}"
         },
         "collection": {
           "data": ""

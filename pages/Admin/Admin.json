@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 440,
+          "bottomRow": 860,
           "containerStyle": "none",
           "snapRows": 63,
           "parentRowSpace": 1,
@@ -38,18 +38,6 @@
           ],
           [
             {
-              "id": "Admin_get_user",
-              "name": "get_user",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "appsmith.store.user?.email"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "Admin_Find_users1",
               "name": "Find_users1",
               "confirmBeforeExecute": false,
@@ -58,6 +46,18 @@
                 "TableUsers1.pageOffset",
                 "TableUsers1.pageSize",
                 " TableUsers1.sortOrder.column ? { [TableUsers1.sortOrder.column]: TableUsers1.sortOrder.order !== \"desc\" ? 1 : -1 } : {}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Admin_get_user",
+              "name": "get_user",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.store.user?.email"
               ],
               "timeoutInMillisecond": 10000
             }

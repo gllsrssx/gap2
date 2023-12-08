@@ -17,7 +17,7 @@
     "parentRowSpace": 10,
     "type": "CONTAINER_WIDGET",
     "hideCard": false,
-    "shouldScrollContents": true,
+    "shouldScrollContents": false,
     "mobileRightColumn": 24,
     "animateLoading": true,
     "parentColumnSpace": 18.984375,

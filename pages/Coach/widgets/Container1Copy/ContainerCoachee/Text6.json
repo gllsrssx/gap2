@@ -19,7 +19,7 @@
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
     "parentColumnSpace": 18.703125,
     "dynamicTriggerPathList": [],
-    "leftColumn": 23,
+    "leftColumn": 27,
     "dynamicBindingPathList": [
         {"key": "truncateButtonColor"},
         {"key": "fontFamily"},
@@ -30,7 +30,7 @@
     "text": "competenites",
     "key": "tyre2sl9xm",
     "isDeprecated": false,
-    "rightColumn": 39,
+    "rightColumn": 43,
     "textAlign": "LEFT",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "5rbpcc7j30",

@@ -1,10 +1,10 @@
 {
-    "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-    "borderColor": "#E0DEDE",
+    "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+    "borderColor": "transparent",
     "onSort": "{{\n            Find_competences1.run();\n            Total_record_competences1.run()\n          }}",
     "isVisibleDownload": false,
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.e6911f8bb94dc6c4a102a74740c41763.svg",
-    "topRow": 8,
+    "topRow": 5,
     "isSortable": true,
     "onPageChange": "{{\n            Find_competences1.run();\n            Total_record_competences1.run()\n          }}",
     "defaultNewRow": "{\n \"userId\": \"{{appsmith.store.selectedUser}}\",\n \"rating\": -1,\n \"mayor\": false\n}",
@@ -14,7 +14,6 @@
     "dynamicBindingPathList": [
         {"key": "accentColor"},
         {"key": "borderRadius"},
-        {"key": "boxShadow"},
         {"key": "tableData"},
         {"key": "totalRecordsCount"},
         {"key": "primaryColumns.competence.computedValue"},
@@ -28,6 +27,7 @@
     "needsHeightForContent": true,
     "leftColumn": 0,
     "delimiter": ",",
+    "variant": "VARIANT3",
     "defaultSelectedRowIndex": 0,
     "showInlineEditingOptionDropdown": true,
     "flexVerticalAlignment": "start",
@@ -82,9 +82,10 @@
         "userId"
     ],
     "dynamicPropertyPathList": [],
+    "compactMode": "DEFAULT",
     "displayName": "Table",
-    "bottomRow": 29,
-    "columnWidthMap": {},
+    "bottomRow": 34,
+    "columnWidthMap": {"competence": 497},
     "parentRowSpace": 10,
     "hideCard": false,
     "onAddNewRowSave": "{{Insert_competences1.run(() => {\n            showAlert(\"Successfully created!\");\n            Find_competences1.run()\n          }, () => {\n            showAlert(\"Unable to create!\");\n          })}}",
@@ -132,6 +133,7 @@
             "sticky": "",
             "originalId": "competence",
             "currencyCode": "USD",
+            "cellBackground": "transparent",
             "verticalAlignment": "CENTER"
         },
         "mayor": {
@@ -164,6 +166,7 @@
             "sticky": "",
             "originalId": "mayor",
             "currencyCode": "USD",
+            "cellBackground": "transparent",
             "verticalAlignment": "CENTER"
         },
         "rating": {
@@ -199,6 +202,7 @@
             "sticky": "",
             "originalId": "rating",
             "currencyCode": "USD",
+            "cellBackground": "transparent",
             "verticalAlignment": "CENTER"
         },
         "description": {
@@ -231,6 +235,7 @@
             "sticky": "",
             "originalId": "description",
             "currencyCode": "USD",
+            "cellBackground": "transparent",
             "verticalAlignment": "CENTER"
         },
         "_id": {
@@ -262,6 +267,7 @@
             "sticky": "",
             "originalId": "_id",
             "currencyCode": "USD",
+            "cellBackground": "transparent",
             "verticalAlignment": "CENTER"
         },
         "userId": {
@@ -293,6 +299,7 @@
             "sticky": "",
             "originalId": "userId",
             "currencyCode": "USD",
+            "cellBackground": "transparent",
             "verticalAlignment": "CENTER"
         }
     },
@@ -318,5 +325,6 @@
     "originalTopRow": 8,
     "mobileLeftColumn": 0,
     "isVisiblePagination": true,
+    "cellBackground": "transparent",
     "verticalAlignment": "CENTER"
 }
