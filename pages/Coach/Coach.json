@@ -14,7 +14,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 2070,
+          "bottomRow": 2890,
           "containerStyle": "none",
           "snapRows": 63,
           "parentRowSpace": 1,
@@ -29,16 +29,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Coach_Total_record_competences1",
-              "name": "Total_record_competences1",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "Coach_get_actions",
               "name": "get_actions",
               "confirmBeforeExecute": false,
@@ -51,15 +41,11 @@
           ],
           [
             {
-              "id": "Coach_Find_competences1",
-              "name": "Find_competences1",
+              "id": "Coach_Total_record_competences1",
+              "name": "Total_record_competences1",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
-              "jsonPathKeys": [
-                "TableUserCompetence.pageSize",
-                "appsmith.store.selectedUser",
-                "TableUserCompetence.pageOffset"
-              ],
+              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             },
             {
@@ -81,6 +67,20 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "appsmith.store.user?.email"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Coach_Find_competences1",
+              "name": "Find_competences1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "TableUserCompetence.pageSize",
+                "appsmith.store.selectedUser",
+                "TableUserCompetence.pageOffset"
               ],
               "timeoutInMillisecond": 10000
             }
