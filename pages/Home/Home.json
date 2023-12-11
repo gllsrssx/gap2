@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 630,
+          "bottomRow": 870,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -27,6 +27,30 @@
           "leftColumn": 0
         },
         "layoutOnLoadActions": [
+          [
+            {
+              "id": "Home_get_actions",
+              "name": "get_actions",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Home_Find_competences2",
+              "name": "Find_competences2",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "{ competence: {$regex: competenceIdVariable.filterText, '$options' : 'i'} }",
+                "competenceIdVariable.filterText",
+                "get_user.data[0]._id"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
           [
             {
               "id": "Home_get_user",

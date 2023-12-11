@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Competentie",
+    "pageId": "Home",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -127,7 +127,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Competentie_update_action",
+  "id": "Home_update_action",
   "deleted": false,
   "gitSyncId": "657084d5d42de31d619385a4_6571cb96583b51497af93cdd"
 }

@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "get_competences",
+    "name": "Find_competences2",
     "datasource": {
       "name": "GAP",
       "pluginId": "mongo-plugin",
@@ -29,13 +29,13 @@
           }
         },
         "body": {
-          "data": "{\n  \"find\": \"competences\",\n\t\"filter\": {\"userId\":\"{{get_user.data[0]._id}}\"},\n\t\"sort\": {\n    \"mayor\": -1,\n    \"rating\": 1\t\t\t\t\t \n}\n"
+          "data": "{\n    \"find\": \"competences\",\n    \"filter\": {\n        \"competence\": {\n            \"$regex\": \"{{competenceIdVariable.filterText}}\",\n            \"$options\": \"i\"\n        },\n        \"userId\": \"{{get_user.data[0]._id}}\"\n    }\n}\n\n"
         },
         "collection": {
           "data": "competences"
         },
         "command": {
-          "data": "FIND"
+          "data": "RAW"
         },
         "count": {
           "query": {
@@ -63,10 +63,10 @@
             "data": ""
           },
           "query": {
-            "data": "{\"userId\":\"{{get_user.data[0]._id}}\"}"
+            "data": "{{{ competence: {$regex: competenceIdVariable.filterText, '$options' : 'i'} }}}"
           },
           "sort": {
-            "data": "{mayor:-1, rating:1}"
+            "data": ""
           },
           "limit": {
             "data": ""
@@ -82,7 +82,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"competences\",\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
+            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {{{ competence: {$regex: competenceIdVariable.filterText, '$options' : 'i'} }}},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -105,25 +105,27 @@
     "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
-        "key": "formData.body.data"
+        "key": "formData.find.query.data"
       },
       {
-        "key": "formData.find.query.data"
+        "key": "formData.body.data"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "get_user.data[0]._id"
+      "competenceIdVariable.filterText",
+      "get_user.data[0]._id",
+      "{ competence: {$regex: competenceIdVariable.filterText, '$options' : 'i'} }"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-12-06T14:27:33Z"
+    "createdAt": "2023-12-08T15:06:33Z"
   },
-  "id": "Home_get_competences",
+  "id": "Home_Find_competences2",
   "deleted": false,
-  "gitSyncId": "656889f38f855d017d93c255_656e01da142eb617729785dc"
+  "gitSyncId": "657084d5d42de31d619385a4_657330f92c973752969560c2"
 }

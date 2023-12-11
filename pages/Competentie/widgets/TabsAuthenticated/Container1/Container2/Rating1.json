@@ -46,7 +46,7 @@
     "defaultRate": "{{(() => {\n    const selectedCompetence = Find_competences1.data.find(competence => competence._id === appsmith.store.selectedCompetence);\n    return selectedCompetence ? selectedCompetence.rating : '2.5';\n})()}}\n",
     "originalTopRow": 0,
     "activeColor": "{{appsmith.theme.colors.primaryColor}}",
-    "size": "LARGE",
+    "size": "MEDIUM",
     "mobileLeftColumn": 23,
     "maxDynamicHeight": 9000,
     "isAllowHalf": true,
