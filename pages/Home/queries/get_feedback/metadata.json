@@ -32,7 +32,7 @@
           "data": "{\n  \"find\": \"feedback\",\n\t\"filter\": {\"userId\":\"{{get_user.data[0]._id}}\"}\n}\n"
         },
         "collection": {
-          "data": "competences"
+          "data": "feedback"
         },
         "command": {
           "data": "FIND"
@@ -102,7 +102,7 @@
         }
       }
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "formData.body.data"

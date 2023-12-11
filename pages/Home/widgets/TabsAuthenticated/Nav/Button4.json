@@ -3,6 +3,7 @@
     "boxShadow": "none",
     "mobileBottomRow": 8,
     "widgetName": "Button4",
+    "onClick": "{{navigateTo('Coach', {}, 'SAME_WINDOW');}}",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "dynamicPropertyPathList": [{"key": "isVisible"}],
     "displayName": "Button",
@@ -19,7 +20,7 @@
     "mobileRightColumn": 46,
     "animateLoading": true,
     "parentColumnSpace": 12.375,
-    "dynamicTriggerPathList": [],
+    "dynamicTriggerPathList": [{"key": "onClick"}],
     "leftColumn": 48,
     "dynamicBindingPathList": [
         {"key": "buttonColor"},

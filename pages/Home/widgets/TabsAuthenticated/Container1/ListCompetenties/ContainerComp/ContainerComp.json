@@ -78,7 +78,7 @@
     "borderWidth": "1",
     "positioning": "fixed",
     "key": "9zm2zimxud",
-    "backgroundColor": "{{currentItem.mayor?'#fee2e2':'white'}}",
+    "backgroundColor": "{{'white'// currentItem.mayor?'#fffcfc':'white'\n}}",
     "isDeprecated": false,
     "rightColumn": 64,
     "widgetId": "1s6c5en8cq",
