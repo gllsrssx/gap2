@@ -45,7 +45,7 @@
         {"key": "onOptionChange"}
     ],
     "labelPosition": "Top",
-    "sourceData": "{{Find_competences2.data}}",
+    "sourceData": "{{Find_competences.data}}",
     "key": "vgh3sj7mcm",
     "labelTextSize": "0.875rem",
     "isDeprecated": false,
@@ -61,7 +61,7 @@
     "responsiveBehavior": "fill",
     "mobileLeftColumn": 0,
     "maxDynamicHeight": 9000,
-    "onFilterUpdate": "{{\n            Find_competences2.run();\n            \n          }}",
+    "onFilterUpdate": "{{\n            Find_competences.run();\n            \n          }}",
     "onOptionChange": "{{storeValue('selectedCompetence', competenceIdVariable.selectedOptionValue);}}",
     "minDynamicHeight": 4
 }

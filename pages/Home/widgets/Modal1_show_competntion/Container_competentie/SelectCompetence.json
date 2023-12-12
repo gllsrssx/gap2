@@ -32,7 +32,10 @@
     "mobileBottomRow": 7,
     "widgetName": "SelectCompetence",
     "isFilterable": true,
-    "dynamicPropertyPathList": [],
+    "dynamicPropertyPathList": [
+        {"key": "optionValue"},
+        {"key": "optionLabel"}
+    ],
     "displayName": "Select",
     "searchTags": ["dropdown"],
     "bottomRow": 4,
@@ -45,7 +48,7 @@
         {"key": "onOptionChange"}
     ],
     "labelPosition": "Auto",
-    "sourceData": "{{Find_competences3.data}}",
+    "sourceData": "{{Find_competences.data.map( (obj) =>{ return  {'label': obj.competence, 'value': obj.description } })}}",
     "key": "vgh3sj7mcm",
     "labelTextSize": "0.875rem",
     "isDeprecated": false,
@@ -61,7 +64,7 @@
     "responsiveBehavior": "fill",
     "mobileLeftColumn": 0,
     "maxDynamicHeight": 9000,
-    "onFilterUpdate": "{{\n            Find_competences3.run();\n            \n          }}",
+    "onFilterUpdate": "{{Find_competences.run()}}",
     "onOptionChange": "{{storeValue('selectedCompetence', SelectCompetence.selectedOptionValue);\nget_actions.run();\nget_feedback.run();}}",
     "minDynamicHeight": 4
 }

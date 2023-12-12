@@ -5,11 +5,15 @@
       "isDefault": true
     },
     {
-      "id": "Welcome",
+      "id": "Coaching",
       "isDefault": false
     },
     {
       "id": "Admin",
+      "isDefault": false
+    },
+    {
+      "id": "Welcome",
       "isDefault": false
     },
     {
