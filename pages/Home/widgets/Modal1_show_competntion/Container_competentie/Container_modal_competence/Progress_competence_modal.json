@@ -30,7 +30,7 @@
     "rightColumn": 64,
     "counterClosewise": false,
     "widgetId": "f1q6runlv1",
-    "isVisible": "{{(() => {\nconst selectedCompetence = Find_competences.data.find(competence => \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t competence._id === appsmith.store.selectedCompetence);\n    return selectedCompetence.rating == -1 ? \n\t\t\t'false' : 'true';\n})()}}",
+    "isVisible": "{{(() => {\nconst selectedCompetence = Find_competences1.data.find(competence => \n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t competence._id === appsmith.store.selectedCompetence);\n    return selectedCompetence.rating == -1 ? \n\t\t\t'false' : 'true';\n})()}}",
     "steps": 1,
     "version": 1,
     "parentId": "sam0r9v115",
@@ -41,5 +41,5 @@
     "responsiveBehavior": "fill",
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 13,
-    "progress": "{{(() => {\n    const selectedCompetence = Find_competences.data.find(competence => competence._id === appsmith.store.selectedCompetence);\n    return selectedCompetence ? selectedCompetence.rating*20 : '-1';\n})()}}\n"
+    "progress": "{{(() => {\n    const selectedCompetence = Find_competences1.data.find(competence => competence._id === appsmith.store.selectedCompetence);\n    return selectedCompetence ? selectedCompetence.rating*20 : '-1';\n})()}}\n"
 }

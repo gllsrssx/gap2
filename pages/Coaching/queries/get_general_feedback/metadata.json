@@ -63,7 +63,7 @@
             "data": ""
           },
           "sort": {
-            "data": ""
+            "data": "{date:-1}"
           },
           "limit": {
             "data": ""
@@ -79,7 +79,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"feedback\",\n  \"filter\": {\n\t\"userId\":\"{{appsmith.store.selectedUser}}\",\n\t\"competenceId\": \"0\"\n},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
+            "data": "{\n  \"find\": \"feedback\",\n  \"filter\": {\n\t\"userId\":\"{{appsmith.store.selectedUser}}\",\n\t\"competenceId\": \"0\"\n},\n  \"sort\": {date:-1},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
             "status": "SUCCESS"
           }
         },

@@ -2,7 +2,7 @@
     "boxShadow": "none",
     "mobileBottomRow": 11,
     "widgetName": "IconButton_add_feedback_g",
-    "onClick": "{{storeValue('selectedCompetence', currentItem.competenceId).then(() => {\n  showModal('ModalAddAction');\n});}}",
+    "onClick": "{{showModal('ModalAdd_Feedback_general');}}",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "dynamicPropertyPathList": [],
     "displayName": "Icon button",
@@ -22,7 +22,7 @@
     "animateLoading": true,
     "parentColumnSpace": 8.078125,
     "dynamicTriggerPathList": [{"key": "onClick"}],
-    "leftColumn": 57,
+    "leftColumn": 56,
     "dynamicBindingPathList": [
         {"key": "buttonColor"},
         {"key": "borderRadius"}

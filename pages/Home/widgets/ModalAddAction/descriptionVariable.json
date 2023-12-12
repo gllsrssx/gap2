@@ -14,7 +14,7 @@
     "labelStyle": "",
     "inputType": "MULTI_LINE_TEXT",
     "isDisabled": false,
-    "isRequired": false,
+    "isRequired": true,
     "dynamicHeight": "AUTO_HEIGHT",
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
     "showStepArrows": false,
@@ -29,6 +29,7 @@
     "originalBottomRow": 21,
     "mobileBottomRow": 18,
     "widgetName": "descriptionVariable",
+    "dynamicPropertyPathList": [],
     "displayName": "Input",
     "searchTags": [
         "form",

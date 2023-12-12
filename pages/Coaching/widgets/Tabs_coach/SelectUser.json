@@ -8,7 +8,7 @@
     "serverSideFiltering": false,
     "defaultOptionValue": "{{ ((options, serverSideFiltering) => (  \nappsmith.store.selectedUser? appsmith.store.selectedUser : ''\n))(SelectUser.options, SelectUser.serverSideFiltering) }}",
     "animateLoading": true,
-    "leftColumn": 0,
+    "leftColumn": 1,
     "dynamicBindingPathList": [
         {"key": "accentColor"},
         {"key": "borderRadius"},
@@ -45,7 +45,7 @@
     "key": "u0vku7syeu",
     "labelTextSize": "0.875rem",
     "isDeprecated": false,
-    "rightColumn": 64,
+    "rightColumn": 63,
     "widgetId": "8btwctzxcp",
     "optionValue": "value",
     "minWidth": 450,

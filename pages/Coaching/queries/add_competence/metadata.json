@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "update_action",
+    "name": "add_competence",
     "datasource": {
       "name": "GAP",
       "pluginId": "mongo-plugin",
@@ -29,15 +29,16 @@
           }
         },
         "body": {
-          "data": "{\n    \"update\": \"actions\",\n    \"updates\": [\n        {\n            \"q\": {\n                \"$or\": [\n                    { \"description\": \"{{descriptionVariable.text}}\" },\n                    { \n                        \"competenceId\": \"{{appsmith.store.selectedCompetence}}\", \n                        \"date\": { \"$date\": \"{{TextTodayISO.text}}\" }\n                    }\n                ]\n            },\n            \"u\": {\n                \"$set\": {\n                    \"description\": \"{{descriptionVariable.text}}\",\n                    \"competenceId\": \"{{appsmith.store.selectedCompetence}}\",\n                    \"date\": { \"$date\": \"{{TextTodayISO.text}}\" }\n                }\n            },\n            \"upsert\": true\n        }\n    ]\n}\n"
+          "data": "{\n    \"update\": \"competence\",\n    \"updates\": [\n        {\n            \"u\": {\n                \"$set\": {\n                    \"feedback\": \"{{descriptionVariable.text}}\",\n                    \"date\": { \"$date\": \"{{TextTodayISO.text}}\" },\n                    \"competenceId\": \"0\",\n                    \"userId\": \"{{appsmith.store.selectedUser}}\",\n                }\n            },\n            \"upsert\": true\n        }\n    ]\n}\n"
         },
         "collection": {
-          "data": "action",
+          "data": "competences",
           "componentData": "users",
-          "viewType": "json"
+          "viewType": "component",
+          "jsonData": ""
         },
         "command": {
-          "data": "RAW"
+          "data": "INSERT"
         },
         "count": {
           "query": {
@@ -79,7 +80,7 @@
         },
         "insert": {
           "documents": {
-            "data": "{{(ModalAddAction. || {})}}"
+            "data": "{\n\t\"competence\": \"{{input_comp_title.text}}\",\n\t\"rating\": -1.0,\n\t\"description\": \"{{Input_comp_desc.text}}\",\n\t\"userId\": \"{{appsmith.store.selectedUser}}\",\n\t\"mayor\": \"{{Switch1.isSwitchedOn}}\"\n}"
           }
         },
         "misc": {
@@ -107,27 +108,30 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "formData.insert.documents.data"
+        "key": "formData.body.data"
       },
       {
-        "key": "formData.body.data"
+        "key": "formData.insert.documents.data"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "(ModalAddAction. || {})",
+      "Input_comp_desc.text",
+      "Switch1.isSwitchedOn",
       "TextTodayISO.text",
-      "appsmith.store.selectedCompetence",
-      "descriptionVariable.text"
+      "appsmith.store.selectedUser",
+      "descriptionVariable.text",
+      "input_comp_title.text"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-12-12T10:19:23Z"
   },
-  "id": "Coaching_update_action",
+  "id": "Coaching_add_competence",
   "deleted": false,
   "gitSyncId": "657084d5d42de31d619385a4_657833aba90039272ae35871"
 }
