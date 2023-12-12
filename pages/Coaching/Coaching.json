@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1280,
+          "bottomRow": 1290,
           "containerStyle": "none",
           "snapRows": 63,
           "parentRowSpace": 1,
@@ -25,7 +25,69 @@
           "dynamicBindingPathList": [],
           "leftColumn": 0
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Coaching_get_general_feedback",
+              "name": "get_general_feedback",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.store.selectedUser"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Coaching_get_actions",
+              "name": "get_actions",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Coaching_get_user",
+              "name": "get_user",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.store.user?.email"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Coaching_get_competences",
+              "name": "get_competences",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.store.selectedUser",
+                "get_user.data[0]._id"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Coaching_Find_users",
+              "name": "Find_users",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "\n{ name: {$regex: SelectCompetence.filterText, '$options' : 'i'} },\n\"Filter\":{}\n",
+                "{ name: {$regex: SelectCompetence.filterText, '$options' : 'i'},\n        \"coachId\": \"{{get_user.data[0]._id}}\" }",
+                "get_user.data[0]._id"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "Coaching",

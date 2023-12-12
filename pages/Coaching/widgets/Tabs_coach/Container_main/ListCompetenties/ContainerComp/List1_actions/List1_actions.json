@@ -86,7 +86,7 @@
     "currentItemsView": "{{[]}}",
     "triggeredItemView": "{{{}}}",
     "widgetName": "List1_actions",
-    "listData": "{{ \n    get_actions.data.filter(action => action.competenceId === currentItem._id).length === 0 \n    ? [{ \"date\": \"\", \"competenceId\": currentItem._id, \"description\": \"Druk op de plus knop om ondernomen acties toe te voegen\", \"_id\": \"\" }]\n    : get_actions.data.filter(action => action.competenceId === currentItem._id)\n}}\n",
+    "listData": "{{ \n    get_actions.data.filter(action => action.competenceId === currentItem._id).length === 0 \n    ? [{ \"date\": \"\", \"competenceId\": currentItem._id, \"description\": SelectUser.selectedOptionLabel+\" heeft nog geen acties ondernomen voor de competentie \"+currentItem.competence, \"_id\": \"\" }]\n    : get_actions.data.filter(action => action.competenceId === currentItem._id)\n}}\n",
     "displayName": "List",
     "bottomRow": 17,
     "parentRowSpace": 10,

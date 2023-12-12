@@ -1,13 +1,13 @@
 {
-    "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+    "boxShadow": "none",
     "mobileBottomRow": 27,
     "widgetName": "Tabs_coach",
-    "borderColor": "#E0DEDE",
+    "borderColor": "transparent",
     "isCanvas": true,
     "displayName": "Tabs",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.9e3d67c0af9c0bd092dc56240314e18a.svg",
-    "topRow": 8,
-    "bottomRow": 128,
+    "topRow": 13,
+    "bottomRow": 129,
     "parentRowSpace": 10,
     "type": "TABS_WIDGET",
     "hideCard": false,
@@ -20,7 +20,7 @@
     "dynamicBindingPathList": [
         {"key": "accentColor"},
         {"key": "borderRadius"},
-        {"key": "boxShadow"}
+        {"key": "defaultTab"}
     ],
     "children": [
         {
@@ -115,14 +115,14 @@
     "borderWidth": 1,
     "flexVerticalAlignment": "stretch",
     "key": "k2g59ptwh1",
-    "backgroundColor": "#FFFFFF",
+    "backgroundColor": "transparent",
     "isDeprecated": false,
     "rightColumn": 64,
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "52u5cn4fki",
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-    "defaultTab": "isCoach",
-    "shouldShowTabs": true,
+    "defaultTab": "{{Find_users.data.length > 0? 'isCoach' : 'isNotCoach'}}",
+    "shouldShowTabs": false,
     "minWidth": 450,
     "tabsObj": {
         "tab1": {
@@ -150,10 +150,10 @@
     "isLoading": false,
     "mobileTopRow": 12,
     "responsiveBehavior": "fill",
-    "originalTopRow": 8,
+    "originalTopRow": 13,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 0,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 128,
+    "originalBottomRow": 129,
     "minDynamicHeight": 15
 }

@@ -2,7 +2,7 @@
     "resetFormOnClick": false,
     "boxShadow": "none",
     "mobileBottomRow": 6,
-    "widgetName": "ButtonLogoutCopy",
+    "widgetName": "ButtonLogout",
     "onClick": "{{(()=>{\n\tstoreValue('user',undefined);\n\tstoreValue('selectedCompetence',undefined);\n\tstoreValue('selectedUser',undefined);\n\tnavigateTo('Home');\n})()}}",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "dynamicPropertyPathList": [{"key": "onClick"}],
@@ -21,7 +21,7 @@
     "animateLoading": true,
     "parentColumnSpace": 8.205123901367188,
     "dynamicTriggerPathList": [{"key": "onClick"}],
-    "leftColumn": 58,
+    "leftColumn": 57,
     "dynamicBindingPathList": [
         {"key": "buttonColor"},
         {"key": "borderRadius"}

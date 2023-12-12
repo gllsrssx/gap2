@@ -85,7 +85,7 @@
     "currentItemsView": "{{[]}}",
     "triggeredItemView": "{{{}}}",
     "widgetName": "List_feedback",
-    "listData": "{{get_general_feedback.data}}",
+    "listData": "{{get_general_feedback.data.length > 0 ? get_general_feedback.data : [{date:Date()}]}}",
     "displayName": "List",
     "bottomRow": 36,
     "parentRowSpace": 10,

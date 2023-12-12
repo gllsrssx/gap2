@@ -23,7 +23,10 @@
     "parentColumnSpace": 9.375,
     "dynamicTriggerPathList": [],
     "leftColumn": 0,
-    "dynamicBindingPathList": [{"key": "borderRadius"}],
+    "dynamicBindingPathList": [
+        {"key": "borderRadius"},
+        {"key": "isVisible"}
+    ],
     "children": [{
         "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
         "mobileBottomRow": 100,
@@ -74,7 +77,7 @@
     "widgetId": "yxn4u4d3fd",
     "containerStyle": "card",
     "minWidth": 450,
-    "isVisible": "true",
+    "isVisible": "{{appsmith.store.selectedUser? true : false}}",
     "version": 1,
     "parentId": "9d81ud7n31",
     "tags": ["Layout"],

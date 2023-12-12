@@ -41,7 +41,7 @@
     "parentColumnSpace": 13,
     "dynamicTriggerPathList": [{"key": "onOptionChange"}],
     "labelPosition": "Top",
-    "sourceData": "{{Find_users1.data.map( (obj) =>{ return  {'label': obj.name, 'value': obj._id } })}}",
+    "sourceData": "{{Find_users.data.map( (obj) =>{ return  {'label': obj.name, 'value': obj._id } })}}",
     "key": "u0vku7syeu",
     "labelTextSize": "0.875rem",
     "isDeprecated": false,
@@ -57,6 +57,6 @@
     "responsiveBehavior": "fill",
     "mobileLeftColumn": 19,
     "maxDynamicHeight": 9000,
-    "onOptionChange": "{{storeValue('selectedUser', SelectUser.selectedOptionValue).then(() => {\n  Find_competences1.run();\n  get_actions.run();\n  get_feedback.run();\n});}}",
+    "onOptionChange": "{{storeValue('selectedUser', SelectUser.selectedOptionValue).then(() => {\n  Find_competences.run();\n  get_actions.run();\n  get_general_feedback.run();\n  get_general_feedback.run();\n  get_competences.run();\n});}}",
     "minDynamicHeight": 4
 }

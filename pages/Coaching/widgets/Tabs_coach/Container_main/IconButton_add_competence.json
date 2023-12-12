@@ -1,7 +1,7 @@
 {
     "boxShadow": "none",
     "mobileBottomRow": 11,
-    "widgetName": "IconButton_add_action",
+    "widgetName": "IconButton_add_competence",
     "onClick": "{{storeValue('selectedCompetence', currentItem.competenceId).then(() => {\n  showModal('ModalAddAction');\n});}}",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "dynamicPropertyPathList": [],
@@ -11,9 +11,9 @@
         "click",
         "submit"
     ],
-    "topRow": 0,
-    "bottomRow": 6,
-    "tooltip": "add a new action \nupdate if its the same day",
+    "topRow": 36,
+    "bottomRow": 40,
+    "tooltip": "add a new competence \nupdate if its the same day",
     "parentRowSpace": 10,
     "type": "ICON_BUTTON_WIDGET",
     "hideCard": false,
@@ -22,7 +22,7 @@
     "animateLoading": true,
     "parentColumnSpace": 8.078125,
     "dynamicTriggerPathList": [{"key": "onClick"}],
-    "leftColumn": 59,
+    "leftColumn": 57,
     "dynamicBindingPathList": [
         {"key": "buttonColor"},
         {"key": "borderRadius"}
@@ -38,7 +38,7 @@
     "minWidth": 50,
     "isVisible": true,
     "version": 1,
-    "parentId": "bof767vo2c",
+    "parentId": "z9a6n8ghe5",
     "tags": ["Buttons"],
     "renderMode": "CANVAS",
     "isLoading": false,

@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "Find_competences",
+    "name": "get_feedback",
     "datasource": {
       "name": "GAP",
       "pluginId": "mongo-plugin",
@@ -29,13 +29,13 @@
           }
         },
         "body": {
-          "data": "{\n    \"find\": \"competences\",\n    \"filter\": {\n        \"competence\": {\n            \"$regex\": \"{{competenceIdVariable.filterText}}\",\n            \"$options\": \"i\"\n        },\n        \"userId\": \"{{appsmith.store.selectedUser}}\"\n    }\n}\n\n"
+          "data": "{\n  \"find\": \"feedback\",\n\t\"filter\": {\"userId\":\"{{get_user.data[0]._id}}\"}\n}\n"
         },
         "collection": {
-          "data": "competences"
+          "data": "feedback"
         },
         "command": {
-          "data": "RAW"
+          "data": "FIND"
         },
         "count": {
           "query": {
@@ -63,7 +63,7 @@
             "data": ""
           },
           "query": {
-            "data": "{{{ competence: {$regex: competenceIdVariable.filterText, '$options' : 'i'} }}}"
+            "data": "{\"userId\":\"{{appsmith.store.selectedUser}}\"}"
           },
           "sort": {
             "data": ""
@@ -82,7 +82,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"competences\",\n  \"filter\": {{{ competence: {$regex: competenceIdVariable.filterText, '$options' : 'i'} }}},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
+            "data": "{\n  \"find\": \"competences\",\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -105,10 +105,10 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "formData.find.query.data"
+        "key": "formData.body.data"
       },
       {
-        "key": "formData.body.data"
+        "key": "formData.find.query.data"
       }
     ],
     "isValid": true,
@@ -116,15 +116,14 @@
     "messages": [],
     "jsonPathKeys": [
       "appsmith.store.selectedUser",
-      "competenceIdVariable.filterText",
-      "{ competence: {$regex: competenceIdVariable.filterText, '$options' : 'i'} }"
+      "get_user.data[0]._id"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Coaching_Find_competences",
+  "id": "Coaching_get_feedback",
   "deleted": false,
-  "gitSyncId": "657084d5d42de31d619385a4_65782ff59a2ca30caa99546a"
+  "gitSyncId": "657084d5d42de31d619385a4_65783480421c4b2d2acf6685"
 }

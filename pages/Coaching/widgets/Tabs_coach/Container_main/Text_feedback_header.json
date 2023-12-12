@@ -19,7 +19,7 @@
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
     "parentColumnSpace": 12.6875,
     "dynamicTriggerPathList": [],
-    "leftColumn": 0,
+    "leftColumn": 17,
     "dynamicBindingPathList": [
         {"key": "truncateButtonColor"},
         {"key": "fontFamily"},
@@ -31,7 +31,7 @@
     "text": "Algemene feedback",
     "key": "oj1vnsdcy6",
     "isDeprecated": false,
-    "rightColumn": 64,
+    "rightColumn": 51,
     "textAlign": "CENTER",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "kbdj5f2sib",

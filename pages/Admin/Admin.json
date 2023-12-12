@@ -38,18 +38,6 @@
           ],
           [
             {
-              "id": "Admin_get_user",
-              "name": "get_user",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "appsmith.store.user?.email"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "Admin_Find_users1",
               "name": "Find_users1",
               "confirmBeforeExecute": false,
@@ -58,6 +46,32 @@
                 "TableUsers1.pageOffset",
                 "TableUsers1.pageSize",
                 " TableUsers1.sortOrder.column ? { [TableUsers1.sortOrder.column]: TableUsers1.sortOrder.order !== \"desc\" ? 1 : -1 } : {}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Admin_Find_users",
+              "name": "Find_users",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "\n{ name: {$regex: SelectCompetence.filterText, '$options' : 'i'} },\n\"Filter\":{}\n",
+                "{ name: {$regex: SelectCompetence.filterText, '$options' : 'i'},\n        \"coachId\": \"{{get_user.data[0]._id}}\" }",
+                "get_user.data[0]._id"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Admin_get_user",
+              "name": "get_user",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.store.user?.email"
               ],
               "timeoutInMillisecond": 10000
             }

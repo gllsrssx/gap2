@@ -28,7 +28,7 @@
     "leftColumn": 0,
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "{{currentItem?.description?currentItem.description: \"Druk op de plus knop om ondernomen acties toe te voegen\"}}",
+    "text": "{{currentItem.description}}",
     "key": "g8ao4l6z1k",
     "isDeprecated": false,
     "rightColumn": 59,

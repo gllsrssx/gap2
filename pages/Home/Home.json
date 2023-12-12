@@ -39,6 +39,32 @@
           ],
           [
             {
+              "id": "Home_Find_competences",
+              "name": "Find_competences",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "{ competence: {$regex: competenceIdVariable.filterText, '$options' : 'i'} }",
+                "competenceIdVariable.filterText",
+                "get_user.data[0]._id"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Home_Find_users",
+              "name": "Find_users",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "\n{ name: {$regex: SelectCompetence.filterText, '$options' : 'i'} },\n\"Filter\":{}\n",
+                "{ name: {$regex: SelectCompetence.filterText, '$options' : 'i'},\n        \"coachId\": \"{{get_user.data[0]._id}}\" }",
+                "get_user.data[0]._id"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Home_get_user",
               "name": "get_user",
               "confirmBeforeExecute": false,
@@ -50,18 +76,6 @@
             }
           ],
           [
-            {
-              "id": "Home_Find_competences",
-              "name": "Find_competences",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "{ competence: {$regex: competenceIdVariable.filterText, '$options' : 'i'} }",
-                "competenceIdVariable.filterText",
-                "get_user.data[0]._id"
-              ],
-              "timeoutInMillisecond": 10000
-            },
             {
               "id": "Home_get_competences",
               "name": "get_competences",
