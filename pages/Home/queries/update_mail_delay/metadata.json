@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "mail_users",
+    "name": "update_mail_delay",
     "datasource": {
       "name": "GAP",
       "pluginId": "mongo-plugin",
@@ -18,6 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
+      "body": "{\n  \"update\": \"users\",\n  \"updates\": [{\n    \"q\": {_id : {{send_email.data.}}},\n    \"u\": ,\n    \"multi\": false,\n  }]\n}\n",
       "selfReferencingDataPaths": [],
       "formData": {
         "aggregate": {
@@ -32,7 +33,7 @@
           "data": "users"
         },
         "command": {
-          "data": "FIND"
+          "data": "UPDATE"
         },
         "count": {
           "query": {
@@ -79,7 +80,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"users\",\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
+            "data": "{\n  \"update\": \"users\",\n  \"updates\": [{\n    \"q\": {_id : {{send_emails.userId}}},\n    \"u\": {lastEmailSent : {{send_emails.now}}},\n    \"multi\": false,\n  }]\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -91,27 +92,41 @@
             "data": "SINGLE"
           },
           "query": {
-            "data": ""
+            "data": "{_id : {{send_emails.userId}}}"
           },
           "update": {
-            "data": ""
+            "data": "{lastEmailSent : {{send_emails.now}}}"
           }
         }
       }
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      },
+      {
+        "key": "formData.updateMany.query.data"
+      },
+      {
+        "key": "formData.updateMany.update.data"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "send_email.data.",
+      "send_emails.now",
+      "send_emails.userId"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-12-14T13:13:53Z"
+    "createdAt": "2023-12-14T14:44:07Z"
   },
-  "id": "Home_mail_users",
+  "id": "Home_update_mail_delay",
   "deleted": false,
-  "gitSyncId": "657084d5d42de31d619385a4_657aff919c7f231d1c611229"
+  "gitSyncId": "657084d5d42de31d619385a4_657b14b79e573524db05c73c"
 }
