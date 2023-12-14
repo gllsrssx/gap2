@@ -29,11 +29,14 @@
             "data": ""
           }
         },
+        "body": {
+          "data": "{\n  \"update\": \"users\",\n  \"updates\": [\n    {\n      \"q\": { \"_id\": { \"$oid\": \"{{send_emails.userId}}\" } },\n      \"u\": { \"$set\": { \"lastEmailSent\": { \"$date\" : \"{{send_emails.now}}\"} } },\n      \"upsert\": true\n    }\n  ]\n}\n"
+        },
         "collection": {
           "data": "users"
         },
         "command": {
-          "data": "UPDATE"
+          "data": "RAW"
         },
         "count": {
           "query": {
@@ -110,6 +113,9 @@
       },
       {
         "key": "formData.updateMany.update.data"
+      },
+      {
+        "key": "formData.body.data"
       }
     ],
     "isValid": true,

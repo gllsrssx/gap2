@@ -8,6 +8,10 @@
     "archivedActions": [],
     "variables": [
       {
+        "name": "now",
+        "value": "''"
+      },
+      {
         "name": "userId",
         "value": "''"
       },
@@ -17,10 +21,6 @@
       },
       {
         "name": "userMail",
-        "value": "''"
-      },
-      {
-        "name": "now",
         "value": "''"
       },
       {
