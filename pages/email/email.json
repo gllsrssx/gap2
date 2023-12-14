@@ -28,24 +28,24 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "email_get_user",
-              "name": "get_user",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "appsmith.store.user?.email"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "email_Find_users1",
               "name": "Find_users1",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
                 "{ email: {$regex: gmail.filterText, '$options' : 'i'} }"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "email_get_user",
+              "name": "get_user",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.store.user?.email"
               ],
               "timeoutInMillisecond": 10000
             }

@@ -70,7 +70,7 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1702547468231,
+    "columnUpdatedAt": 1702559757011,
     "originalBottomRow": 41,
     "primaryColumnId": "_id",
     "defaultSelectedRowIndices": [0],
@@ -90,7 +90,10 @@
     "compactMode": "SHORT",
     "displayName": "Table",
     "bottomRow": 36,
-    "columnWidthMap": {"email": 240},
+    "columnWidthMap": {
+        "isAdmin": 105,
+        "email": 240
+    },
     "parentRowSpace": 10,
     "hideCard": false,
     "onAddNewRowSave": "{{Insert_users1.run(() => {\n            showAlert(\"Successfully created!\");\n            Find_users1.run()\n          }, () => {\n            showAlert(\"Unable to create!\");\n          })}}",
@@ -233,7 +236,7 @@
             "index": 2,
             "isDiscardVisible": true,
             "isVisible": true,
-            "label": "is admin",
+            "label": "admin",
             "fontStyle": "",
             "textColor": "",
             "columnType": "switch",

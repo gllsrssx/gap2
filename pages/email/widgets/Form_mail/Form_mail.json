@@ -2,7 +2,7 @@
     "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
     "mobileBottomRow": 43,
     "borderColor": "#E0DEDE",
-    "widgetName": "Form1",
+    "widgetName": "Form_mail",
     "isCanvas": true,
     "displayName": "Form",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.e17c486a34778f3bae299c9110e00cf6.svg",
