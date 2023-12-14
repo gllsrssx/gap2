@@ -20,7 +20,7 @@
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
     "parentColumnSpace": 13,
     "dynamicTriggerPathList": [],
-    "leftColumn": 33,
+    "leftColumn": 36,
     "dynamicBindingPathList": [
         {"key": "truncateButtonColor"},
         {"key": "fontFamily"},
@@ -32,7 +32,7 @@
     "text": "{{(() => {\n    const now = new Date();\n    now.setHours(1, 0, 0, 0);\n\n    let isoString = now.toISOString();\n\tisoString = isoString.substring(0, isoString.length - 5) + \"Z\";\n    return isoString;\n})()}}",
     "key": "m4tm7vmc69",
     "isDeprecated": false,
-    "rightColumn": 35,
+    "rightColumn": 38,
     "textAlign": "RIGHT",
     "dynamicHeight": "FIXED",
     "widgetId": "gnpqui78oj",

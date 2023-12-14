@@ -89,7 +89,7 @@
     "dynamicPropertyPathList": [],
     "compactMode": "SHORT",
     "displayName": "Table",
-    "bottomRow": 74,
+    "bottomRow": 36,
     "columnWidthMap": {"email": 240},
     "parentRowSpace": 10,
     "hideCard": false,

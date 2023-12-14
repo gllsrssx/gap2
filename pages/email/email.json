@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 640,
+          "bottomRow": 460,
           "containerStyle": "none",
           "snapRows": 63,
           "parentRowSpace": 1,
@@ -25,7 +25,33 @@
           "dynamicBindingPathList": [],
           "leftColumn": 0
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "email_get_user",
+              "name": "get_user",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.store.user?.email"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "email_Find_users1",
+              "name": "Find_users1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "{ email: {$regex: gmail.filterText, '$options' : 'i'} }"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "email",
         "deleted": false,
