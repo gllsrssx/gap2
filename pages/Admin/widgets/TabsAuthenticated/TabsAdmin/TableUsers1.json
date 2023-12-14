@@ -70,7 +70,7 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1702321524208,
+    "columnUpdatedAt": 1702547468231,
     "originalBottomRow": 41,
     "primaryColumnId": "_id",
     "defaultSelectedRowIndices": [0],
@@ -128,7 +128,7 @@
             "allowCellWrapping": false,
             "index": 6,
             "isDiscardVisible": true,
-            "isVisible": true,
+            "isVisible": false,
             "label": "coach",
             "fontStyle": "",
             "textColor": "",

@@ -16,7 +16,8 @@
         {"key": "primaryKeys"},
         {"key": "accentColor"},
         {"key": "borderRadius"},
-        {"key": "listData"}
+        {"key": "listData"},
+        {"key": "isVisible"}
     ],
     "leftColumn": 0,
     "enhancements": true,
@@ -66,7 +67,7 @@
     "flexVerticalAlignment": "start",
     "itemBackgroundColor": "#FFFFFF",
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-    "isVisible": true,
+    "isVisible": "{{get_general_feedback.data.length > 0}}",
     "tags": [
         "Suggested",
         "Display"
@@ -86,6 +87,7 @@
     "triggeredItemView": "{{{}}}",
     "widgetName": "List_feedback",
     "listData": "{{get_general_feedback.data.length > 0 ? get_general_feedback.data : [{date:Date()}]}}",
+    "dynamicPropertyPathList": [{"key": "isVisible"}],
     "displayName": "List",
     "bottomRow": 36,
     "parentRowSpace": 10,

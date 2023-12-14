@@ -76,7 +76,7 @@
     "isLoading": false,
     "mainCanvasId": "b2rdlit34t",
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "originalBottomRow": 64,
+    "originalBottomRow": 55,
     "additionalStaticProps": [
         "level",
         "levelData",

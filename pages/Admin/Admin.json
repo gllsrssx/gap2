@@ -38,6 +38,18 @@
           ],
           [
             {
+              "id": "Admin_get_user",
+              "name": "get_user",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.store.user?.email"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "Admin_Find_users1",
               "name": "Find_users1",
               "confirmBeforeExecute": false,
@@ -57,21 +69,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "\n{ name: {$regex: SelectCompetence.filterText, '$options' : 'i'} },\n\"Filter\":{}\n",
-                "{ name: {$regex: SelectCompetence.filterText, '$options' : 'i'},\n        \"coachId\": \"{{get_user.data[0]._id}}\" }",
                 "get_user.data[0]._id"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Admin_get_user",
-              "name": "get_user",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "appsmith.store.user?.email"
               ],
               "timeoutInMillisecond": 10000
             }

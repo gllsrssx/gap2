@@ -32,7 +32,7 @@
           "data": "{\n    \"find\": \"users\",\n    \"filter\": {\n        \"coachId\": \"{{get_user.data[0]._id}}\"\n    }\n}"
         },
         "collection": {
-          "data": "users"
+          "data": ""
         },
         "command": {
           "data": "RAW"
@@ -63,7 +63,7 @@
             "data": ""
           },
           "query": {
-            "data": "{{{ name: {$regex: SelectCompetence.filterText, '$options' : 'i'},\n        \"coachId\": \"{{get_user.data[0]._id}}\" }}}"
+            "data": ""
           },
           "sort": {
             "data": ""
@@ -82,7 +82,7 @@
         },
         "misc": {
           "formToNativeQuery": {
-            "data": "{\n  \"find\": \"users\",\n  \"filter\": {{\n{ name: {$regex: SelectCompetence.filterText, '$options' : 'i'} },\n\"Filter\":{}\n}},\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
+            "data": "{\n  \"find\": \"null\",\n  \"limit\": 10,\n  \"batchSize\": 10\n}\n",
             "status": "SUCCESS"
           }
         },
@@ -106,26 +106,21 @@
     "dynamicBindingPathList": [
       {
         "key": "formData.body.data"
-      },
-      {
-        "key": "formData.find.query.data"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "\n{ name: {$regex: SelectCompetence.filterText, '$options' : 'i'} },\n\"Filter\":{}\n",
-      "get_user.data[0]._id",
-      "{ name: {$regex: SelectCompetence.filterText, '$options' : 'i'},\n        \"coachId\": \"{{get_user.data[0]._id}}\" }"
+      "get_user.data[0]._id"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-12-12T10:08:42Z"
+    "createdAt": "2023-12-14T09:29:28Z"
   },
   "id": "Coaching_Find_users",
   "deleted": false,
-  "gitSyncId": "657084d5d42de31d619385a4_6578312a599e0b06877e0a36"
+  "gitSyncId": "657084d5d42de31d619385a4_657acaf833c9a6055706849d"
 }
