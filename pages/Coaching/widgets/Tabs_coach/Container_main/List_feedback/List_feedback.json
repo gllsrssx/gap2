@@ -5,9 +5,10 @@
     "templateHeight": 160,
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.5c9511142b3624c7491c5442e8ccd0ef.svg",
     "topRow": 5,
-    "pageSize": 3,
+    "pageSize": 2,
     "type": "LIST_WIDGET_V2",
     "itemSpacing": 8,
+    "topRowBeforeCollapse": 5,
     "animateLoading": true,
     "dynamicBindingPathList": [
         {"key": "currentItemsView"},
@@ -16,8 +17,7 @@
         {"key": "primaryKeys"},
         {"key": "accentColor"},
         {"key": "borderRadius"},
-        {"key": "listData"},
-        {"key": "isVisible"}
+        {"key": "listData"}
     ],
     "leftColumn": 0,
     "enhancements": true,
@@ -27,7 +27,7 @@
         "widgetName": "Canvas8Copy",
         "displayName": "Canvas",
         "topRow": 0,
-        "bottomRow": 310,
+        "bottomRow": 240,
         "parentRowSpace": 1,
         "type": "CANVAS_WIDGET",
         "canExtend": false,
@@ -67,7 +67,8 @@
     "flexVerticalAlignment": "start",
     "itemBackgroundColor": "#FFFFFF",
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-    "isVisible": "{{get_general_feedback.data.length > 0}}",
+    "bottomRowBeforeCollapse": 36,
+    "isVisible": true,
     "tags": [
         "Suggested",
         "Display"
@@ -76,6 +77,7 @@
     "isLoading": false,
     "mainCanvasId": "y8yooqoqel",
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+    "originalBottomRow": 36,
     "additionalStaticProps": [
         "level",
         "levelData",
@@ -86,10 +88,10 @@
     "currentItemsView": "{{[]}}",
     "triggeredItemView": "{{{}}}",
     "widgetName": "List_feedback",
-    "listData": "{{get_general_feedback.data.length > 0 ? get_general_feedback.data : [{date:Date()}]}}",
-    "dynamicPropertyPathList": [{"key": "isVisible"}],
+    "listData": "{{get_general_feedback.data.length > 0 ? get_general_feedback.data : [{\n\t_id:0,\n\tdate:Date()}]}}",
+    "dynamicPropertyPathList": [],
     "displayName": "List",
-    "bottomRow": 36,
+    "bottomRow": 29,
     "parentRowSpace": 10,
     "hideCard": false,
     "mobileRightColumn": 39,
@@ -109,6 +111,7 @@
     "renderMode": "CANVAS",
     "mobileTopRow": 0,
     "responsiveBehavior": "fill",
+    "originalTopRow": 5,
     "mobileLeftColumn": 15,
     "selectedItemView": "{{{}}}"
 }

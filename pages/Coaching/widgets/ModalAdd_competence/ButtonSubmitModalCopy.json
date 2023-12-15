@@ -3,7 +3,7 @@
     "boxShadow": "none",
     "mobileBottomRow": 22,
     "widgetName": "ButtonSubmitModalCopy",
-    "onClick": "{{add_competence.run().then(() => {\n  closeModal('ModalAdd_Feedback_generalCopy');\n  Find_users.run();\n}).catch(() => {\n  showAlert('Try again!', 'error');\n});}}",
+    "onClick": "{{update_competence.run().then(() => {\n  closeModal('ModalAdd_Feedback_generalCopy');\n  Find_users.run();\n}).catch(() => {\n  showAlert('Try again!', 'error');\n});}}",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "displayName": "Button",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.05d209fafeb13a8569e3b4e97069d9ee.svg",

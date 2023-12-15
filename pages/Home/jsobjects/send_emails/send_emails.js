@@ -7,7 +7,7 @@ export default {
 	message : '',
 	
 	async sendEmailToUsers() {
-    const delay = 1000 * 60 * 0 * 0 * 0; // 5 days in milliseconds // const delay = 1000 * 60 * 60 * 24 * 5; // 5 days in milliseconds
+    const delay = 1000 * 60 * 60 * 24 * 5; // 5 days in milliseconds // const delay = 1000 * 60 * 60 * 24 * 5; // 5 days in milliseconds
     const now = new Date();
 
     for (const user of mail_users.data) {
@@ -32,7 +32,7 @@ zie je terug binnen 5 dagen.
         const calc = now - lastEmailSent;
 
         if (calc <= delay) {
-            console.log(`Skipping email to ${this.userName} - last email sent recently.`);
+            // console.log(`Skipping email to ${this.userName} - last email sent recently.`);
             continue; // Skip sending an email if the last email was sent within the delay
         }
 
@@ -41,7 +41,7 @@ zie je terug binnen 5 dagen.
 
         try {
             await send_email.run();
-            console.log(`Email sent to ${this.userName}`);
+            // console.log(`Email sent to ${this.userName}`);
         } catch (error) {
             console.error(`Failed to send email to ${user.email}: ${error}`);
         }

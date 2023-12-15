@@ -17,7 +17,7 @@
     "overflow": "NONE",
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
     "dynamicTriggerPathList": [],
-    "leftColumn": 1,
+    "leftColumn": 0,
     "dynamicBindingPathList": [
         {"key": "truncateButtonColor"},
         {"key": "fontFamily"},
@@ -28,7 +28,7 @@
     "text": "Feedback toevoegen",
     "key": "9wm5u1qgfx",
     "isDeprecated": false,
-    "rightColumn": 41,
+    "rightColumn": 32,
     "textAlign": "LEFT",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "hbimaqb2p4",

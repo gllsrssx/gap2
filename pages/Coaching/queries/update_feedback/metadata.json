@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "mongo-plugin",
   "unpublishedAction": {
-    "name": "Find_users",
+    "name": "update_feedback",
     "datasource": {
       "name": "GAP",
       "pluginId": "mongo-plugin",
@@ -13,7 +13,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Home",
+    "pageId": "Coaching",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -29,13 +29,16 @@
           }
         },
         "body": {
-          "data": "{\n    \"find\": \"users\",\n    \"filter\": {\n        \"coachId\": \"{{get_user.data[0]._id}}\"\n    }\n}"
+          "data": "{\n  \"update\": \"feedback\",\n  \"updates\": [\n    {\n      \"q\": { \"competenceId\": { \"$oid\": \"{{SelectCompetence.selectedOptionValue}}\" } },\n      \"u\": { \n        \"$set\": { \n          \"feedback\": {{Input_score.text}},\t\t \n        }\n      },\n      \"upsert\": false\n    }\n  ]\n}\n"
         },
         "collection": {
-          "data": "users"
+          "data": "competences",
+          "componentData": "users",
+          "viewType": "component",
+          "jsonData": ""
         },
         "command": {
-          "data": "FIND"
+          "data": "RAW"
         },
         "count": {
           "query": {
@@ -63,7 +66,7 @@
             "data": ""
           },
           "query": {
-            "data": "{\n\t\"coachId\": \"{{get_user.data[0]._id}}\"\n}"
+            "data": ""
           },
           "sort": {
             "data": ""
@@ -77,7 +80,13 @@
         },
         "insert": {
           "documents": {
-            "data": ""
+            "data": "{\n\t\"competence\": \"{{input_comp_title.text}}\",\n\t\"rating\": -1.0,\n\t\"description\": \"{{Input_comp_desc.text}}\",\n\t\"userId\": \"{{appsmith.store.selectedUser}}\",\n\t\"mayor\": \"{{Switch1.isSwitchedOn}}\"\n}"
+          }
+        },
+        "misc": {
+          "formToNativeQuery": {
+            "data": "{\n  \"update\": \"users\",\n  \"updates\": [{\n    \"q\": ,\n    \"u\": ,\n    \"multi\": false,\n  }]\n}\n",
+            "status": "SUCCESS"
           }
         },
         "smartSubstitution": {
@@ -96,28 +105,33 @@
         }
       }
     },
-    "executeOnLoad": true,
+    "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
         "key": "formData.body.data"
       },
       {
-        "key": "formData.find.query.data"
+        "key": "formData.insert.documents.data"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "get_user.data[0]._id"
+      "Input_comp_desc.text",
+      "Input_score.text",
+      "SelectCompetence.selectedOptionValue",
+      "Switch1.isSwitchedOn",
+      "appsmith.store.selectedUser",
+      "input_comp_title.text"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": [],
-    "createdAt": "2023-12-15T09:19:42Z"
+    "createdAt": "2023-12-15T11:05:12Z"
   },
-  "id": "Home_Find_users",
+  "id": "Coaching_update_feedback",
   "deleted": false,
-  "gitSyncId": "657084d5d42de31d619385a4_657c1a2e303f7b330c9753fd"
+  "gitSyncId": "657084d5d42de31d619385a4_657c32e8c8356e4ca12ccb74"
 }

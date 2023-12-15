@@ -15,22 +15,6 @@
     {
       "id": "Welcome",
       "isDefault": false
-    },
-    {
-      "id": "Competentie",
-      "isDefault": false
-    },
-    {
-      "id": "Evaluatie",
-      "isDefault": false
-    },
-    {
-      "id": "Coach",
-      "isDefault": false
-    },
-    {
-      "id": "email",
-      "isDefault": false
     }
   ],
   "viewMode": false,
@@ -55,7 +39,7 @@
   "color": "#F5D1D1",
   "icon": "flag",
   "unpublishedAppLayout": {
-    "type": "FLUID"
+    "type": "DESKTOP"
   },
   "publishedAppLayout": {
     "type": "FLUID"

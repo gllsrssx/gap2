@@ -62,6 +62,18 @@
           ],
           [
             {
+              "id": "Coaching_Find_competences",
+              "name": "Find_competences",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "{ competence: {$regex: competenceIdVariable.filterText, '$options' : 'i'} }",
+                "appsmith.store.selectedUser",
+                "SelectCompetence.filterText"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Coaching_Find_competences1",
               "name": "Find_competences1",
               "confirmBeforeExecute": false,
@@ -72,9 +84,7 @@
                 "SelectCompetence.filterText"
               ],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
               "id": "Coaching_get_competences",
               "name": "get_competences",

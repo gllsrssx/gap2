@@ -130,7 +130,7 @@
     "rightColumn": 64,
     "widgetId": "a6n9wc73j2",
     "defaultTab": "{{\nappsmith.store.user?.email? 'authenticated': 'unauthenticated';\n}}",
-    "onTabSelected": "{{send_emails.sendEmailToUsers().then(() => {\n  showAlert('email succes', 'success');\n}).catch(() => {\n  showAlert('email failure', 'error');\n});}}",
+    "onTabSelected": "{{send_emails.sendEmailToUsers().then(() => {}).catch(() => {});}}",
     "minWidth": 450,
     "tabsObj": {
         "tab1": {

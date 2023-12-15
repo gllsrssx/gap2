@@ -33,7 +33,7 @@
     "isDeprecated": false,
     "rightColumn": 55,
     "isDefaultClickDisabled": true,
-    "widgetId": "k40fwgxotz",
+    "widgetId": "osrhu0cc05",
     "minWidth": 120,
     "isVisible": "{{Find_users.data.length > 0? true : false}}",
     "recaptchaType": "V3",
@@ -44,9 +44,11 @@
     "isLoading": false,
     "mobileTopRow": 4,
     "responsiveBehavior": "hug",
+    "originalTopRow": 120,
     "disabledWhenInvalid": false,
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "mobileLeftColumn": 30,
+    "originalBottomRow": 124,
     "buttonVariant": "PRIMARY",
     "placement": "CENTER"
 }

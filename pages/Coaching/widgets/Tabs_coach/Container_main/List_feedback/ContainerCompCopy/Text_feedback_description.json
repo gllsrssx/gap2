@@ -28,7 +28,7 @@
     "leftColumn": 0,
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "{{currentItem?.feedback? currentItem.feedback: SelectUser.selectedOptionLabel+\" heeft nog geen algemene feedback gekregen.\"}}",
+    "text": "{{currentItem?.feedback? currentItem.feedback: SelectUser.selectedOptionLabel+\" heb je nog geen algemene feedback gegeven!\"}}",
     "key": "g8ao4l6z1k",
     "isDeprecated": false,
     "rightColumn": 55,
