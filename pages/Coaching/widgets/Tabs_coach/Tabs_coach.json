@@ -1,5 +1,5 @@
 {
-    "boxShadow": "none",
+    "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
     "mobileBottomRow": 27,
     "widgetName": "Tabs_coach",
     "borderColor": "transparent",
@@ -7,7 +7,7 @@
     "displayName": "Tabs",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.9e3d67c0af9c0bd092dc56240314e18a.svg",
     "topRow": 8,
-    "bottomRow": 124,
+    "bottomRow": 110,
     "parentRowSpace": 10,
     "type": "TABS_WIDGET",
     "hideCard": false,
@@ -19,7 +19,6 @@
     "leftColumn": 0,
     "dynamicBindingPathList": [
         {"key": "accentColor"},
-        {"key": "borderRadius"},
         {"key": "defaultTab"}
     ],
     "children": [
@@ -29,7 +28,7 @@
             "mobileBottomRow": 150,
             "widgetName": "Canvas14",
             "displayName": "Canvas",
-            "bottomRow": 1160,
+            "bottomRow": 1020,
             "topRow": 0,
             "parentRowSpace": 1,
             "type": "CANVAS_WIDGET",
@@ -73,7 +72,7 @@
             "mobileBottomRow": 150,
             "widgetName": "Canvas15",
             "displayName": "Canvas",
-            "bottomRow": 1160,
+            "bottomRow": 1020,
             "topRow": 0,
             "parentRowSpace": 1,
             "type": "CANVAS_WIDGET",
@@ -115,7 +114,7 @@
     "borderWidth": 1,
     "flexVerticalAlignment": "stretch",
     "key": "k2g59ptwh1",
-    "backgroundColor": "transparent",
+    "backgroundColor": "white",
     "isDeprecated": false,
     "rightColumn": 64,
     "dynamicHeight": "AUTO_HEIGHT",
@@ -151,9 +150,9 @@
     "mobileTopRow": 12,
     "responsiveBehavior": "fill",
     "originalTopRow": 8,
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+    "borderRadius": "1.5rem",
     "mobileLeftColumn": 0,
     "maxDynamicHeight": 9000,
-    "originalBottomRow": 124,
+    "originalBottomRow": 110,
     "minDynamicHeight": 15
 }

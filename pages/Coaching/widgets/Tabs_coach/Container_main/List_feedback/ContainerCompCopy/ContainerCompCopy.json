@@ -1,5 +1,5 @@
 {
-    "boxShadow": "none",
+    "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
     "borderColor": "#e0dede",
     "isCanvas": true,
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.daebf68875b6c8e909e9e8ac8bee0c02.svg",
@@ -17,7 +17,7 @@
         "widgetName": "Canvas9Copy",
         "displayName": "Canvas",
         "topRow": 0,
-        "bottomRow": 80,
+        "bottomRow": 120,
         "parentRowSpace": 1,
         "type": "CANVAS_WIDGET",
         "canExtend": false,
@@ -69,7 +69,7 @@
         "parent",
         "group"
     ],
-    "bottomRow": 8,
+    "bottomRow": 12,
     "dragDisabled": true,
     "hideCard": false,
     "shouldScrollContents": false,

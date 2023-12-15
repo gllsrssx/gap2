@@ -1,10 +1,10 @@
 {
-    "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+    "boxShadow": "none",
     "requiresFlatWidgetChildren": true,
     "isCanvas": true,
     "templateHeight": 160,
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.5c9511142b3624c7491c5442e8ccd0ef.svg",
-    "topRow": 48,
+    "topRow": 52,
     "pageSize": 1,
     "type": "LIST_WIDGET_V2",
     "itemSpacing": 8,
@@ -76,7 +76,7 @@
     "isLoading": false,
     "mainCanvasId": "id58wjfve9",
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "originalBottomRow": 60,
+    "originalBottomRow": 61,
     "additionalStaticProps": [
         "level",
         "levelData",
@@ -89,7 +89,7 @@
     "widgetName": "List_actions_modal",
     "listData": "\n{{\nget_actions.data.filter(action => action.competenceId === appsmith.store.selectedCompetence).length == 0?\n[{ \"_id\": 1, \"description\": SelectUser.selectedOptionLabel+\" heeft nog geen acties gemaakt\", \"date\": new Date() }] : get_actions.data.filter(action => action.competenceId === appsmith.store.selectedCompetence);\n}}",
     "displayName": "List",
-    "bottomRow": 61,
+    "bottomRow": 65,
     "parentRowSpace": 10,
     "hideCard": false,
     "mobileRightColumn": 24,
@@ -108,7 +108,7 @@
     "renderMode": "CANVAS",
     "mobileTopRow": 12,
     "responsiveBehavior": "fill",
-    "originalTopRow": 47,
+    "originalTopRow": 48,
     "mobileLeftColumn": 0,
     "selectedItemView": "{{{}}}"
 }

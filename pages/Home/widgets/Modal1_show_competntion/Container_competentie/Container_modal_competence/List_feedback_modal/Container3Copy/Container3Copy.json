@@ -1,5 +1,5 @@
 {
-    "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+    "boxShadow": "none",
     "mobileBottomRow": 12,
     "borderColor": "#E0DEDE",
     "widgetName": "Container3Copy",
@@ -23,10 +23,7 @@
     "animateLoading": true,
     "dynamicTriggerPathList": [],
     "leftColumn": 0,
-    "dynamicBindingPathList": [
-        {"key": "borderRadius"},
-        {"key": "boxShadow"}
-    ],
+    "dynamicBindingPathList": [{"key": "borderRadius"}],
     "children": [{
         "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
         "widgetName": "Canvas5Copy",
@@ -64,7 +61,7 @@
         "minDynamicHeight": 4,
         "flexLayers": []
     }],
-    "borderWidth": "1",
+    "borderWidth": "0",
     "positioning": "fixed",
     "flexVerticalAlignment": "stretch",
     "key": "kg2fq8xowb",

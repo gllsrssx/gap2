@@ -11,8 +11,8 @@
         "click",
         "submit"
     ],
-    "topRow": 36,
-    "bottomRow": 40,
+    "topRow": 22,
+    "bottomRow": 26,
     "tooltip": "add a new competence \nupdate if its the same day",
     "parentRowSpace": 10,
     "type": "ICON_BUTTON_WIDGET",

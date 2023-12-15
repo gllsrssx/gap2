@@ -10,7 +10,7 @@
         "label"
     ],
     "topRow": 0,
-    "bottomRow": 6,
+    "bottomRow": 7,
     "type": "TEXT_WIDGET",
     "hideCard": false,
     "mobileRightColumn": 28,
@@ -24,7 +24,7 @@
         {"key": "borderRadius"},
         {"key": "text"}
     ],
-    "leftColumn": 55,
+    "leftColumn": 57,
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
     "text": "{{(() => {\n    const date = new Date(currentItem.date);\n    const day = String(date.getDate()).padStart(2, '0');\n    const month = String(date.getMonth() + 1).padStart(2, '0'); // January is 0!\n    const year = date.getFullYear().toString().substr(-2);\n\n    return `${day}/${month}/${year}`;\n})()}}\n",
