@@ -7,7 +7,7 @@ export default {
 	message : '',
 	
 	async sendEmailToUsers() {
-    const delay = 1000 * 60 * 60 * 24 * 0; // timeout in milliseconds, last * is Days
+    const delay = 1000 * 60 * 60 * 24 * 5; // timeout in milliseconds, last * is Days
     const now = new Date();
 
     for (const user of mail_users.data) {
@@ -22,6 +22,8 @@ export default {
 hi, ${user.name}
 test bericht, hallo ik ben automated,
 zie je terug binnen 5 dagen.
+
+GAP @ ${appsmith.URL.fullPath}
 `;
 			
         this.message = message;
