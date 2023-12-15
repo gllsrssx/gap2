@@ -7,6 +7,7 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
+        "sshProxyEnabled": false,
         "url": "https://x8ki-letl-twmt.n7.xano.io"
       },
       "invalids": [],
@@ -31,7 +32,7 @@
         },
         {
           "key": "redirect_uri",
-          "value": "https://app.appsmith.com/app/gap2/welcome-65688af28f855d017d93c264"
+          "value": "https://app.appsmith.com/app/gap2/welcome-65688af28f855d017d93c264?branch=dev"
         }
       ],
       "bodyFormData": [],
