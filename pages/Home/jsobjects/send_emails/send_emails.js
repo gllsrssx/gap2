@@ -7,7 +7,7 @@ export default {
 	message : '',
 	
 	async sendEmailToUsers() {
-    const delay = 1000 * 60 * 60 * 24 * 5; // 5 days in milliseconds // const delay = 1000 * 60 * 60 * 24 * 5; // 5 days in milliseconds
+    const delay = 1000 * 60 * 60 * 24 * 0; // timeout in milliseconds, last * is Days
     const now = new Date();
 
     for (const user of mail_users.data) {
