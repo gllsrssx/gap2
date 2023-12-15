@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1190,
+          "bottomRow": 1050,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -44,18 +44,6 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Home_get_user",
-              "name": "get_user",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "appsmith.store.user?.email"
-              ],
               "timeoutInMillisecond": 10000
             },
             {
@@ -98,8 +86,30 @@
           ],
           [
             {
+              "id": "Home_get_user",
+              "name": "get_user",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.store.user?.email"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "Home_get_competences",
               "name": "get_competences",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "get_user.data[0]._id"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Home_get_feedback",
+              "name": "get_feedback",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
@@ -118,17 +128,9 @@
                 "get_user.data[0]._id"
               ],
               "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Home_get_feedback",
-              "name": "get_feedback",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "get_user.data[0]._id"
-              ],
-              "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
             {
               "id": "Home_get_general_feedback",
               "name": "get_general_feedback",

@@ -1,5 +1,5 @@
 {
-    "boxShadow": "none",
+    "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
     "borderColor": "#e0dede",
     "isCanvas": true,
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.daebf68875b6c8e909e9e8ac8bee0c02.svg",
@@ -75,7 +75,7 @@
     "shouldScrollContents": false,
     "mobileRightColumn": 64,
     "dynamicTriggerPathList": [],
-    "borderWidth": "1",
+    "borderWidth": "0",
     "positioning": "fixed",
     "key": "9zm2zimxud",
     "backgroundColor": "{{'white'// currentItem.mayor?'#fffcfc':'white'\n}}",
